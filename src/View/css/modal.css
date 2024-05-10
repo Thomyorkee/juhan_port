@@ -1,0 +1,76 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+.modal_bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: 300ms all ease-in-out;
+}
+
+.opa_on {
+  opacity: 1;
+  z-index: 10;
+  overflow-y: hidden;
+}
+
+.modal {
+  width: 800px;
+  height: 100%;
+  max-height: 700px;
+  z-index: 11;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #303234;
+}
+.modal .modal_body {
+  box-sizing: border-box;
+  padding: 50px;
+  overflow: scroll;
+  height: 100%;
+}
+.modal .modal_body::-webkit-scrollbar {
+  width: 10px;
+}
+.modal .modal_body::-webkit-scrollbar-thumb {
+  background-color: #666666;
+  background-clip: padding-box;
+  border-radius: 10px;
+}
+.modal .modal_header {
+  height: 40px;
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+  background-color: #3E3F41;
+}
+.modal .modal_header .btn_wrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.modal .modal_header .btn_wrap div {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+}
+.modal .modal_header .btn_wrap div:nth-child(1) {
+  background-color: #f9635f;
+}
+.modal .modal_header .btn_wrap div:nth-child(2) {
+  background-color: #febc43;
+}
+.modal .modal_header .btn_wrap div:nth-child(3) {
+  background-color: #33cc47;
+}
+.modal .modal_header .btn_wrap div:hover {
+  scale: 1.05;
+  transition: 300ms all ease-in-out;
+}

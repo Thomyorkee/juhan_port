@@ -1,0 +1,490 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+.notice {
+  min-height: 500px;
+}
+.notice .contentArea {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 75px;
+  font-family: "Noto Sans KR", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.notice .contentArea svg {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.notice .contentArea svg:hover {
+  scale: 1.1;
+}
+.notice .btnWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 25px;
+}
+.notice .btnWrap button {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  width: 120px;
+  height: 30px;
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #333333;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.notice .btnWrap button:first-child {
+  background-color: #c0c0c0;
+  color: #333;
+}
+.notice .btnWrap button:hover {
+  opacity: 0.8;
+  scale: 1.05;
+}
+.notice .grid-table {
+  grid-template-columns: 0.4fr 3fr 1fr;
+  display: grid;
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1;
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px 0;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+          box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .notice .grid-table {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .notice .grid-table {
+    font-size: 14px !important;
+  }
+}
+.notice .grid-table input {
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+}
+.notice .grid-table.th {
+  border-top: 2px solid #333333;
+  color: #333333;
+}
+.notice .grid-table.td {
+  color: #666;
+  cursor: pointer;
+}
+.notice .grid-table.td ._table-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notice .grid-table.td ._table-item:nth-child(2) {
+  text-align: left;
+}
+.notice .grid-table.td ._table-item p {
+  color: #666;
+}
+.notice .grid-table.td:hover {
+  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+}
+.notice .grid-table.td:hover a {
+  color: rgb(80, 178, 233);
+}
+.notice .grid-table.none {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.notice .paging ul {
+  margin: 25px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+.notice .paging ul p {
+  cursor: pointer;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.notice .paging ul p:hover {
+  scale: 1.5;
+}
+.notice .paging ul li {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+  color: #c0c0c0;
+  font-family: "Pretendard";
+  border: 1px solid #e1e1e1;
+}
+.notice .paging ul li.active {
+  border: 1px solid #333333;
+  background-color: #333333;
+  color: #fff;
+}
+
+.noticeTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-family: "Pretendard";
+  font-weight: 700;
+  margin-top: 80px;
+}
+.noticeTitle input {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Pretendard";
+  word-break: keep-all;
+  font-weight: 700;
+  border: none;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .noticeTitle {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noticeTitle {
+    font-size: 30px;
+  }
+}
+
+.backCenter {
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.backCenter a {
+  background-color: #c0c0c0;
+}
+.backCenter * {
+  cursor: pointer;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.backCenter *:hover {
+  scale: 1.05;
+}
+
+.writeNoticeBtn {
+  margin-top: 80px;
+}
+.writeNoticeBtn .submitBtn {
+  width: 30%;
+  height: 50px;
+  border: none;
+  font-size: 23px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Pretendard";
+  border-radius: 10px;
+  background-color: #333333;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+.writeNoticeBtn .submitBtn:hover {
+  scale: 1.05;
+  opacity: 0.9;
+}
+
+.contentDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 25px;
+  font-size: 20px;
+  font-family: "Pretendard";
+  font-weight: 300;
+  margin-top: 25px;
+}
+.contentDate button {
+  border: none;
+  cursor: pointer;
+  background-color: #333333;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: "Pretendard";
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.contentDate button:hover {
+  scale: 1.05;
+  opacity: 0.9;
+}
+.contentDate div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contentDate .date_picker {
+  height: 100%;
+  border: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .contentDate {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contentDate {
+    font-size: 16px;
+  }
+}
+
+.back {
+  background-color: #333333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 22px;
+  font-family: "Pretendard";
+  font-weight: 700;
+  margin: 25px 0;
+  display: inline-block;
+}
+
+.imgScroll {
+  position: relative;
+}
+.imgScroll .wrap {
+  position: relative;
+}
+.imgScroll .threeGrid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+.imgScroll .threeGrid img:nth-child(1) {
+  grid-column: span 2;
+}
+.imgScroll .threeGrid img:nth-child(2) {
+  grid-column: 1;
+}
+.imgScroll .threeGrid img:nth-child(3) {
+  grid-column: 2;
+}
+
+.tabBorder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  position: absolute;
+  top: calc(100% + 20px) !important;
+  overflow: hidden;
+}
+
+.swiper-pagination-progressbar-fill {
+  background-color: #1d9be2 !important;
+}
+
+.write_wrap {
+  gap: 20px;
+  padding: 0 10px;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Pretendard";
+  color: #f1f1f1;
+  margin: 20px 0;
+  grid-template-columns: 2fr 8fr;
+}
+.write_wrap input {
+  padding: 5px 10px;
+  font-family: "Pretendard";
+  font-size: 18px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #f1f1f1;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-color: #444444;
+}
+.write_wrap:nth-child(1) {
+  margin-top: 0;
+}
+
+.ql-toolbar {
+  border: none !important;
+  border-radius: 10px 10px 0 0;
+  background-color: #555555;
+}
+.ql-toolbar .ql-formats {
+  font-family: "Pretendard";
+}
+.ql-toolbar .ql-formats .ql-picker {
+  color: #f1f1f1 !important;
+}
+.ql-toolbar .ql-formats .ql-picker .ql-picker-options {
+  background-color: #444444;
+}
+.ql-toolbar .ql-formats .ql-stroke,
+.ql-toolbar .ql-formats .ql-fill {
+  stroke: #ffffff;
+}
+
+.ql-container {
+  font-family: "Pretendard" !important;
+  font-weight: 500;
+  border: none !important;
+  border-top: 0 !important;
+  color: #ffffff;
+  background-color: #444444;
+  border-radius: 0 0 10px 10px;
+}
+
+.ql-editor {
+  min-height: 300px;
+}
+
+.write_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.write_btn .submitBtn {
+  width: 20%;
+  height: 40px;
+  border: none;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Pretendard";
+  border-radius: 10px;
+  background-color: #444444;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+.write_btn .submitBtn:hover {
+  background-color: #555555;
+}
+
+.change_quill .ql-toolbar {
+  display: none;
+}
+.change_quill .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-radius: 5px !important;
+  border-top: 1px solid #ccc;
+}
+
+.active .ql-toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.active .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-top: 0px;
+}
+
+.noticeContent {
+  font-size: 14px;
+  font-family: "Pretendard";
+  line-height: 24px;
+  margin-top: 30px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 20px 0;
+}
+.noticeContent div {
+  padding: 16px;
+  margin-top: 25;
+}
+.noticeContent div p {
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .noticeContent {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noticeContent {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,484 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --content: 0;
+  --scroll: 0;
+}
+
+[class^=_scroll0] {
+  width: 100%;
+  height: 100vh;
+}
+[class^=_scroll0].on {
+  background-color: red;
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+._scroll01 {
+  background-image: url("/public/img/space.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+._scroll01 ._scrollText {
+  color: #fff;
+  font-weight: 900;
+  font-size: 72px;
+}
+._scroll01 ._scrollText [class^=text] {
+  opacity: 0;
+  animation: opaci 1s ease-in;
+  animation-fill-mode: forwards;
+  transition-duration: 0.3s;
+}
+._scroll01 ._scrollText .text01 {
+  animation-delay: 0.55s;
+}
+._scroll01 ._scrollText .text02 {
+  animation-delay: 0.65s;
+}
+._scroll01 ._scrollText .text03 {
+  animation-delay: 0.7s;
+}
+._scroll01 ._scrollText .text04 {
+  animation-delay: 0.75s;
+}
+._scroll01 ._scrollText .text05 {
+  animation-delay: 0.8s;
+}
+._scroll01 ._scrollText .text06 {
+  animation-delay: 0.85s;
+}
+._scroll01 ._scrollText .text07 {
+  animation-delay: 0.9s;
+}
+._scroll01 ._scrollText .text08 {
+  animation-delay: 0.95s;
+}
+._scroll01 ._scrollText .text09 {
+  animation-delay: 1s;
+}
+._scroll01 ._scrollText .text10 {
+  animation-delay: 1.05s;
+}
+._scroll01 ._scrollText .text11 {
+  animation-delay: 1.15s;
+}
+._scroll01 ._scrollText .text12 {
+  animation-delay: 1.2s;
+}
+._scroll01 ._scrollText .text13 {
+  animation-delay: 1.25s;
+}
+._scroll01 ._scrollText .text14 {
+  animation-delay: 1.3s;
+}
+._scroll01 ._scrollText .text15 {
+  animation-delay: 1.35s;
+}
+._scroll01 .button button {
+  opacity: 0;
+  transform: translate(0, 30%);
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 24px;
+  margin: 10px;
+  animation: button 2s forwards;
+  transition-duration: 0.4s;
+}
+._scroll01 .button button:nth-child(1) {
+  margin-left: 0;
+  animation-delay: 1.15s;
+}
+._scroll01 .button button:nth-child(2) {
+  margin-left: 0;
+  animation-delay: 1.5s;
+}
+._scroll01 .button button:nth-child(3) {
+  margin-left: 0;
+  animation-delay: 1.9s;
+}
+._scroll01 .button button:nth-child(4) {
+  margin-left: 0;
+  animation-delay: 2.3s;
+}
+._scroll01 .button button:nth-child(5) {
+  margin-left: 0;
+  animation-delay: 2.7s;
+}
+
+._scroll02 {
+  position: relative;
+  overflow: hidden;
+}
+._scroll02 .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-duration: 2s;
+}
+._scroll02 .bg .bgPic {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+  background-image: url("/public/img/jungle.jpg");
+  background-size: 110%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+._scroll02.on {
+  background-size: 105%;
+}
+
+@keyframes opaci {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes button {
+  0% {
+    opacity: 0;
+    transform: translate(0, 30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0%);
+  }
+}
+.rollingArea {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+  position: relative;
+  z-index: 3;
+  transform: rotate(18deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.image_rolling {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.image_rolling:nth-child(1) {
+  animation: bannermove 11s linear infinite;
+}
+.image_rolling:nth-child(2) {
+  animation: bannermove 12s linear infinite reverse;
+}
+.image_rolling:nth-child(3) {
+  animation: bannermove 13s linear infinite;
+}
+.image_rolling ._image-item {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.image_rolling ._image-item:nth-child(1) {
+  background-image: url("/public/img/rolling_1.jpg");
+}
+.image_rolling ._image-item:nth-child(2) {
+  background-image: url("/public/img/rolling_2.png");
+}
+.image_rolling ._image-item:nth-child(3) {
+  background-image: url("/public/img/rolling_3.jpg");
+}
+.image_rolling ._image-item:nth-child(4) {
+  background-image: url("/public/img/rolling_1.jpg");
+}
+.image_rolling ._image-item:nth-child(5) {
+  background-image: url("/public/img/rolling_2.png");
+}
+.image_rolling ._image-item:nth-child(6) {
+  background-image: url("/public/img/rolling_3.jpg");
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -50%);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+._scroll03 {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(35, 41, 139);
+  transition-duration: 0.5s;
+  position: relative;
+}
+._scroll03 .border {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 100%;
+  width: 2px;
+  background: #fff;
+  z-index: 3;
+  transition-duration: 0.5s;
+}
+._scroll03 .commonText {
+  width: 50%;
+  height: 100%;
+  transform: skewX(3deg);
+  overflow: hidden;
+  position: relative;
+}
+._scroll03 .commonText .text {
+  position: absolute;
+  top: 50%;
+  font-size: 72px;
+  font-weight: 900;
+  transition-duration: 1s;
+}
+._scroll03 .text-left .text {
+  position: absolute;
+  right: -100%;
+  transition-delay: 0.6s;
+  transform: translate(60%, -50%) skewX(-3deg);
+  -webkit-text-stroke: 2px #fff;
+  color: #fff;
+}
+._scroll03 .text-right .text {
+  position: absolute;
+  left: -100%;
+  transition-delay: 0.6s;
+  transform: translate(-40%, -50%) skewX(-3deg);
+  -webkit-text-stroke: 2px #fff;
+  color: rgba(0, 0, 0, 0);
+}
+._scroll03.on {
+  background-color: rgb(35, 41, 139);
+}
+._scroll03.on .border {
+  top: 100%;
+}
+._scroll03.on .text-left .text {
+  right: 0%;
+}
+._scroll03.on .text-right .text {
+  left: 0%;
+}
+
+._scroll04 {
+  height: auto !important;
+  background-color: antiquewhite !important;
+  padding: 80px 0;
+  text-align: center;
+}
+._scroll04 .stiky_pic {
+  text-align: center;
+}
+._scroll04 .stiky_pic img {
+  width: calc((100 - var(--content)) * 1vw);
+  min-width: 700px;
+  transition-duration: 0.9s;
+}
+
+.weatherContent {
+  background-image: url("/public/img/picture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.weatherContent .blur {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: opacity 250ms;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weatherContent .wrap {
+  margin-top: 130px;
+  height: calc(100% - 130px);
+  padding: 10px 30px 30px 30px;
+}
+.weatherContent .search {
+  margin-top: 20px;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  pointer-events: all;
+  width: calc(100% - 20px);
+}
+.weatherContent .search svg {
+  color: #fff;
+  font-size: 22px;
+}
+.weatherContent .search input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.weatherContent .weather {
+  margin-top: 20px;
+  display: grid;
+  height: 450px;
+  grid-template-columns: 4fr 6fr;
+  gap: 40px;
+}
+.weatherContent .weather:nth-child(1) {
+  grid-column: span 2;
+}
+.weatherContent .weather ._item {
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  padding: 10px;
+  pointer-events: all;
+  width: calc(100% - 20px);
+}
+.weatherContent .weather ._item-bg {
+  position: relative;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  padding: 10px;
+  pointer-events: all;
+  overflow: hidden;
+  width: calc(100% - 20px);
+}
+.weatherContent .weather ._item-bg .flex {
+  display: flex;
+  gap: 20px;
+}
+.weatherContent .weather ._item-bg img {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: -15%;
+  top: -95%;
+  opacity: 0.5;
+}
+.weatherContent .weather ._item-title {
+  color: whitesmoke;
+  font-size: 3em;
+  font-family: "Pretendard";
+  height: 80px;
+  line-height: 80px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.weatherContent .weather ._item-temp {
+  font-size: 20px;
+  font-family: "Pretendard";
+  margin-left: 5px;
+  font-weight: 500px;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+.weatherContent .weather ._item-temp .small {
+  font-size: 14px;
+}
+
+.search_grid {
+  position: relative;
+}
+.search_grid .searchList {
+  margin-top: 5px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  gap: 10px;
+  max-height: 300px;
+  pointer-events: all;
+  overflow-y: scroll;
+  width: calc(100% - 20px);
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  transition: all 300ms ease-in-out;
+}
+.search_grid .searchList::-webkit-scrollbar {
+  width: 10px;
+}
+.search_grid .searchList::-webkit-scrollbar-thumb {
+  background-color: #666666;
+  background-clip: padding-box;
+  border-radius: 10px;
+}
+.search_grid .searchList .item {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: "Pretendard";
+  color: #333333;
+}
+.search_grid .searchList .item div {
+  transition: 300ms all ease-in-out;
+  cursor: pointer;
+}
+.search_grid .searchList .item div:hover {
+  color: #1d9be2;
+}
+.search_grid .searched {
+  padding: 10px;
+  opacity: 1;
+}

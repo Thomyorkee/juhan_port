@@ -1,0 +1,58 @@
+password = '가립니다'
+pipeline {
+    agent none
+    options { skipDefaultCheckout(true) }
+    stages {
+        stage('Checkout repository') {
+            agent any
+            steps {
+                checkout scm
+            }
+        }
+        stage('React build') {
+            agent {
+                docker {
+                    image 'node:16.17.0-alpine'
+                    args '-u root'
+                }
+            }
+            steps {
+                dir('juhan_port') {
+                    sh 'npm install'
+                    sh 'GENERATE_SOURCEMAP=false CI=false npm run build'
+                }
+            }
+        }
+        stage('Docker build') {
+	        agent any
+	        steps {
+                sh 'docker build -t juhan_port:latest -f ./juhan_port/Dockerfile .'
+	            sh 'docker save -o juhan_port.tar juhan_port:latest'
+	            sh 'docker rmi juhan_port'
+	            sh 'docker image prune -f'
+	        }
+	    }
+        stage('SSH transfer') {
+        	agent any
+            steps{
+                sshPublisher(
+                    continueOnError: false, failOnError: true,
+                    publishers: [
+                        sshPublisherDesc(
+                            configName: "Dev111",
+                            verbose: true,
+                            transfers: [
+                                sshTransfer(
+                                    sourceFiles: "juhan_port.tar", 
+                                    removePrefix: "", 
+                                    remoteDirectory: "",
+                                    execCommand: "docker ps -f name=juhan_port -q | xargs --no-run-if-empty docker container stop ; docker container ls -a -f name=juhan_port -q | xargs -r docker container rm ; docker rmi juhan_port ; docker load -i juhan_port.tar ; docker run -d --name juhan_port -p 8845:80 juhan_port:latest"
+  								)
+                            ]
+                        )
+                    ]
+                )
+            }
+        }
+    }
+}

@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "SUIT-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.bg {
+  background-image: url("/public/img/bg_01.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.change {
+  display: grid;
+  grid-template-rows: auto;
+  width: 280px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+.change .paddingArea {
+  padding: 10px;
+}
+.change .logo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 60px 0 80px;
+}
+.change .logo p {
+  color: #f3f6fb;
+  font-family: "SUIT-Medium";
+  font-size: 31px;
+  font-weight: 600;
+}
+.change .wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 0;
+}
+.change .wave svg path {
+  opacity: 0;
+  fill: 0;
+}
+.change .textArea,
+.change .logo {
+  opacity: 0;
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+}
+.change .itemLoding {
+  opacity: 1;
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+}
+.change.view {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.change.view .wave svg path {
+  opacity: 1;
+  fill: #fff;
+}
+.change .textArea {
+  background-color: #fff;
+}
+
+._input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #f3f6fb;
+  border-radius: 5px;
+  border: 0;
+  font-family: "SUIT-Medium";
+}
+._input input {
+  border: 0;
+  width: 100%;
+  outline: none;
+  margin-top: 12px;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "SUIT-Medium";
+}
+._input .titleText {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(10px, -50%);
+          transform: translate(10px, -50%);
+  font-size: 14px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+._input .titleText.on {
+  -webkit-transform: translate(10px, 5px);
+          transform: translate(10px, 5px);
+  top: 0;
+  font-size: 12px;
+}
+._input .svgIcon {
+  font-size: 0;
+}
+._input .svgIcon svg {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.textArea {
+  overflow: hidden;
+}
+
+.changeArea {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.changeArea .after,
+.changeArea .before {
+  width: 100%;
+}
+.changeArea.Before {
+  -webkit-transform: translate(calc(-50% - 5px), 0);
+          transform: translate(calc(-50% - 5px), 0);
+}
+
+/*button S*/
+._button {
+  width: calc(100% - 20px);
+  border-radius: 10px;
+  background-color: #3D4756;
+  padding: 10px;
+  font-size: 0;
+  cursor: pointer;
+}
+._button button {
+  cursor: pointer;
+  font-size: 0px;
+  width: 100%;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+._button button p {
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  font-family: "SUIT-Medium";
+  font-weight: 800;
+}
+._button button svg {
+  font-size: 18px;
+  color: #f3f6fb !important;
+}
+._button:last-child {
+  margin-top: 10px;
+}
+
+/*button E*/
+._gridBtn {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+._gridBtn > svg {
+  border: 1px solid #3D4756;
+  padding: 10px;
+  border-radius: 10px;
+  color: #3D4756;
+}
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.chart_wrap {
+  font-family: "Noto Sans CJK KR-Medium";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  width: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  height: 100vh;
+  background-color: #ffffff;
+  transition: all 300ms;
+}
+.chart_wrap p {
+  margin: 0;
+}
+.chart_wrap .chart_head {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  margin-top: 90px;
+}
+.chart_wrap .chart_head p {
+  padding-left: 50px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.chart_wrap .chart_head button {
+  cursor: pointer;
+  background-color: #666666;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  font-size: 1em;
+  line-height: 40px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  text-align: center;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s;
+}
+.chart_wrap .chart_head button p {
+  font-size: 0.9em;
+  line-height: 40px;
+}
+.chart_wrap .chart_head button::before {
+  content: "✖";
+}
+.chart_wrap .chart_head button:hover {
+  transform: rotate(180deg);
+}
+
+.onChart {
+  width: 450px;
+}

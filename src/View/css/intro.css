@@ -1,0 +1,269 @@
+@import url("https: //cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css");
+/*history S*/
+.history {
+  position: relative;
+}
+.history .historyContent {
+  padding: 80px 0;
+}
+.history .historyContent:nth-child(2) {
+  background-color: #f1f3f7;
+}
+.history ._grid {
+  display: grid;
+  grid-template-columns: 120px auto 1fr;
+  align-items: flex-start;
+}
+.history ._grid ._item .border {
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  background-color: #1d9be2;
+}
+.history ._grid ._item:nth-child(2) {
+  margin: 10px 20px;
+}
+.history ._grid ._item:nth-child(3) {
+  font-size: 18px;
+  font-family: "SUIT";
+  font-weight: 500;
+  line-height: 28px;
+  margin-left: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .history ._grid ._item:nth-child(3) {
+    font-size: 16px;
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .history ._grid ._item:nth-child(3) {
+    font-size: 14px;
+    margin-left: 25px;
+  }
+}
+.history ._grid ._item .color {
+  color: #1d9be2;
+}
+.history ._grid ._item ._item-title {
+  font-size: 25px;
+  font-family: "SUIT";
+  font-weight: 700;
+  color: #1d9be2;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .history ._grid ._item ._item-title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .history ._grid ._item ._item-title {
+    font-size: 18px;
+  }
+}
+.history ._grid ._item ._item-circle {
+  transform: translate(calc(-50% + 1px), -50%);
+}
+.history ._grid ._item ._item-circle ._circleWhite {
+  background: #fff !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50px;
+  position: relative;
+  z-index: 4;
+}
+.history ._grid ._item ._item-circle::after {
+  display: block;
+  content: "";
+  animation: sparkle 1s linear infinite;
+  background-color: rgba(80, 178, 233, 0.5);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition-duration: 0.5s;
+}
+.history ._grid ._item ._item-circle::before {
+  display: block;
+  content: "";
+  background-color: rgb(80, 178, 233);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px !important;
+  height: 16px !important;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition-duration: 0.5s;
+  z-index: -1;
+}
+
+/*history E*/
+/*client S*/
+.client .swiperBox {
+  position: relative;
+}
+.client .swiperBtn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, calc(-50% - 80px));
+  background-color: #1d9be2;
+  width: 70px;
+  height: 70px;
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 35px;
+  cursor: pointer;
+}
+.client .swiperBtn.swiper-button-disabled {
+  background-color: #f1f3f7;
+  cursor: inherit;
+}
+@media screen and (max-width: 1198px) {
+  .client .swiperBtn {
+    z-index: 9;
+  }
+}
+@media screen and (max-width: 767px) {
+  .client .swiperBtn {
+    display: none;
+  }
+}
+.client .prevBtn {
+  left: -130px;
+}
+@media screen and (max-width: 1198px) {
+  .client .prevBtn {
+    left: 0;
+  }
+}
+.client .nextBtn {
+  right: -130px;
+}
+@media screen and (max-width: 1198px) {
+  .client .nextBtn {
+    right: 0;
+  }
+}
+.client table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.client table th {
+  border: 1px solid #e1e1e1;
+  border-top: 2px solid #1d9be2;
+  background-color: #f1f3f7;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "SUIT";
+  padding: 10px 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .client table th {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .client table th {
+    font-size: 14px;
+  }
+}
+.client table td {
+  border: 1px solid #e1e1e1;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "SUIT";
+  padding: 10px 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .client table td {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .client table td {
+    font-size: 12px;
+  }
+}
+.client table td:nth-child(3) {
+  padding: 10px 20px;
+}
+
+.submitWrap {
+  margin-top: 50px;
+}
+.submitWrap p {
+  font-family: "SUIT";
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #666666;
+}
+.submitWrap .submitBtn {
+  cursor: pointer;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 55px;
+  margin-top: 50px;
+  background: #333333;
+  transition: all 300ms;
+}
+.submitWrap .submitBtn p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+.submitWrap .submitBtn:hover .arrow > div .arrow-1 {
+  left: 5px;
+}
+.submitWrap .submitBtn:hover .arrow > div .vector-8 {
+  left: 14px;
+}
+.submitWrap .submitBtn .arrow {
+  align-items: flex-start;
+  display: flex;
+  min-width: 53px;
+}
+.submitWrap .submitBtn .arrow .overlap-group {
+  height: 24px;
+  position: relative;
+  width: 53px;
+}
+.submitWrap .submitBtn .arrow .overlap-group .ellipse-9 {
+  background-color: #ffffff;
+  border-radius: 12px;
+  height: 24px;
+  left: 29px;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+.submitWrap .submitBtn .arrow .overlap-group .arrow-1 {
+  height: 7px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 8px;
+  width: 44px;
+  transition: all 300ms;
+}
+.submitWrap .submitBtn .arrow .overlap-group .vector-8 {
+  height: 1px;
+  left: 9px;
+  object-fit: cover;
+  position: absolute;
+  top: 11px;
+  width: 20px;
+  transition: all 300ms;
+}

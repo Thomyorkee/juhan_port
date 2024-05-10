@@ -1,0 +1,10 @@
+.idea/
+.dockerignore
+.yarnclean
+Dockerfile
+README.md
+*.log
+node_modules
+build
+*-lock.json
+*.lock

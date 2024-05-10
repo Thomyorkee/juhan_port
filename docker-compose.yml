@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  juhan_port:
+    restart: always
+    container_name: juhan_port
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8845:80
+    environment:
+      - TZ=Asia/Seoul

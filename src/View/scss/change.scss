@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$basicFont : 'SUIT-Medium';
+
+.bg {
+    background-image: url("/public/img/bg_01.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.change {
+    display: grid;
+    grid-template-rows: auto;
+    width: calc(300px - 20px);
+    margin: 0 auto;
+    opacity: 0;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    transition-duration: 1s;
+
+    .paddingArea {
+        padding: 10px;
+    }
+
+    .logo {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 0 80px;
+
+        p { 
+            color: #f3f6fb;
+            font-family: $basicFont;
+            font-size: 31px;
+            font-weight: 600;
+        }
+    }
+
+    .wave {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-size: 0;
+
+        svg {
+            path {
+                opacity: 0;
+                fill: 0;
+            }
+        }
+    }
+
+    .textArea,
+    .logo {
+        opacity: 0;
+        transition-duration: 0.9s;
+    }
+
+    .itemLoding {
+        opacity: 1;
+        transition-duration: 0.9s;
+    }
+
+    &.view {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+
+        .wave {
+            svg {
+                path {
+                    opacity: 1;
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    .textArea {
+        background-color: #fff;
+    }
+}
+
+._input {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: #f3f6fb;
+    border-radius: 5px;
+    border: 0;
+    font-family: $basicFont;
+
+    input {
+        border: 0;
+        width: 100%;
+        outline: none;
+        margin-top: 12px;
+        background-color: rgba(0, 0, 0, 0);
+        font-family: $basicFont;
+    }
+
+    .titleText {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(10px, -50%);
+        font-size: 14px;
+        transition-duration: 0.5s;
+
+        &.on {
+            transform: translate(10px, 5px);
+            top: 0;
+            font-size: 12px;
+        }
+    }
+
+    .svgIcon {
+        font-size: 0;
+
+        svg {
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+.textArea {
+    overflow: hidden;
+}
+
+.changeArea {
+    transform: translate(0, 0);
+    transition-duration: 0.5s;
+
+    .after,
+    .before {
+        width: 100%;
+    }
+
+    &.Before {
+        transform: translate(calc(-50% - 5px), 0);
+    }
+}
+
+/*button S*/
+._button {
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    background-color: #3D4756;
+    padding: 10px;
+    font-size: 0;
+    cursor: pointer;
+
+    button {
+        cursor: pointer;
+        font-size: 0px;
+        width: 100%;
+        border: 0;
+        background-color: rgba(0, 0, 0, 0);
+
+        p {
+            font-size: 14px;
+            margin: 0;
+            color: #fff;
+            font-family: $basicFont;
+            font-weight: 800;
+        }
+
+        svg {
+            font-size: 18px;
+            color: #f3f6fb !important;
+        }
+    }
+
+    &:last-child {
+        margin-top: 10px;
+    }
+}
+
+/*button E*/
+
+._gridBtn {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+._gridBtn>svg {
+    border: 1px solid #3D4756;
+    padding: 10px;
+    border-radius: 10px;
+    color: #3D4756;
+
+    @keyframes rotate {
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+    }
+}

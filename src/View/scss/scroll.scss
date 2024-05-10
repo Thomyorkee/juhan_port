@@ -1,0 +1,594 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+$font: 'Pretendard';
+$fontR: "400";
+$MainColor: #1d9be2;
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --content: 0;
+    --scroll: 0;
+}
+
+[class^="_scroll0"] {
+    width: 100%;
+    height: 100vh;
+
+    &.on {
+        background-color: red;
+    }
+}
+
+.wrap {
+    margin: 0 auto;
+}
+
+._scroll01 {
+    background-image: url("/public/img/space.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+
+    ._scrollText {
+        color: #fff;
+        font-weight: 900;
+        font-size: 72px;
+
+        [class^="text"] {
+            opacity: 0;
+            animation: opaci 1s ease-in;
+            animation-fill-mode: forwards;
+            transition-duration: 0.3s;
+        }
+
+        .text01 {
+            animation-delay: 0.55s
+        }
+
+        .text02 {
+            animation-delay: 0.65s
+        }
+
+        .text03 {
+            animation-delay: 0.7s
+        }
+
+        .text04 {
+            animation-delay: 0.75s
+        }
+
+        .text05 {
+            animation-delay: 0.8s
+        }
+
+        .text06 {
+            animation-delay: 0.85s
+        }
+
+        .text07 {
+            animation-delay: 0.9s
+        }
+
+        .text08 {
+            animation-delay: 0.95s
+        }
+
+        .text09 {
+            animation-delay: 1s
+        }
+
+        .text10 {
+            animation-delay: 1.05s
+        }
+
+        .text11 {
+            animation-delay: 1.15s
+        }
+
+        .text12 {
+            animation-delay: 1.2s
+        }
+
+        .text13 {
+            animation-delay: 1.25s
+        }
+
+        .text14 {
+            animation-delay: 1.3s
+        }
+
+        .text15 {
+            animation-delay: 1.35s
+        }
+
+    }
+
+    .button {
+        button {
+            opacity: 0;
+            transform: translate(0, 30%);
+            background-color: rgba(0, 0, 0, 0);
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 24px;
+            margin: 10px;
+            animation: button 2s forwards;
+            transition-duration: 0.4s;
+
+            &:nth-child(1) {
+                margin-left: 0;
+                animation-delay: 1.15s
+            }
+
+            &:nth-child(2) {
+                margin-left: 0;
+                animation-delay: 1.5s
+            }
+
+            &:nth-child(3) {
+                margin-left: 0;
+                animation-delay: 1.9s
+            }
+
+            &:nth-child(4) {
+                margin-left: 0;
+                animation-delay: 2.3s
+            }
+
+            &:nth-child(5) {
+                margin-left: 0;
+                animation-delay: 2.7s
+            }
+        }
+    }
+}
+
+._scroll02 {
+
+    position: relative;
+    overflow: hidden;
+
+    .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition-duration: 2s;
+
+        .bgPic {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            position: absolute;
+            z-index: 1;
+            background-image: url("/public/img/jungle.jpg");
+            background-size: 110%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+
+    &.on {
+        background-size: 105%;
+    }
+}
+
+@keyframes opaci {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes button {
+    0% {
+        opacity: 0;
+        transform: translate(0, 30%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0%);
+    }
+}
+
+.rollingArea {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+    position: relative;
+    z-index: 3;
+    transform: rotate(18deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.image_rolling {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+
+
+    &:nth-child(1) {
+        animation: bannermove 11s linear infinite;
+    }
+
+    &:nth-child(2) {
+        animation: bannermove 12s linear infinite reverse;
+    }
+
+    &:nth-child(3) {
+        animation: bannermove 13s linear infinite;
+    }
+
+    ._image-item {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 300px;
+        border-radius: 10px;
+        background-color: #fff;
+
+
+
+        &:nth-child(1) {
+            background-image: url("/public/img/rolling_1.jpg")
+        }
+
+        &:nth-child(2) {
+            background-image: url("/public/img/rolling_2.png")
+        }
+
+        &:nth-child(3) {
+            background-image: url("/public/img/rolling_3.jpg")
+        }
+
+        &:nth-child(4) {
+            background-image: url("/public/img/rolling_1.jpg")
+        }
+
+        &:nth-child(5) {
+            background-image: url("/public/img/rolling_2.png")
+        }
+
+        &:nth-child(6) {
+            background-image: url("/public/img/rolling_3.jpg")
+        }
+    }
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -50%);
+    }
+
+    100% {
+        transform: translate(0, -100%);
+    }
+}
+
+._scroll03 {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgba(35, 41, 139, 1);
+    transition-duration: 0.5s;
+    position: relative;
+
+    .border {
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 100%;
+        width: 2px;
+        background: #fff;
+        z-index: 3;
+        transition-duration: 0.5s;
+    }
+
+    .commonText {
+        width: 50%;
+        height: 100%;
+        transform: skewX(3deg);
+        overflow: hidden;
+        position: relative;
+
+        .text {
+            position: absolute;
+            top: 50%;
+            font-size: 72px;
+            font-weight: 900;
+            transition-duration: 1s;
+        }
+    }
+
+    .text-left {
+        .text {
+            position: absolute;
+            right: -100%;
+            transition-delay: 0.6s;
+            transform: translate(60%, -50%) skewX(-3deg);
+            -webkit-text-stroke: 2px #fff;
+            color: #fff;
+        }
+    }
+
+    .text-right {
+        .text {
+            position: absolute;
+            left: -100%;
+            transition-delay: 0.6s;
+            transform: translate(-40%, -50%) skewX(-3deg);
+            -webkit-text-stroke: 2px #fff;
+            color: rgba(0, 0, 0, 0);
+        }
+
+    }
+
+    &.on {
+        background-color: rgba(35, 41, 139, 1);
+
+        .border {
+            top: 100%;
+        }
+
+        .text-left {
+
+            .text {
+                right: 0%;
+            }
+        }
+
+        .text-right {
+
+            .text {
+                left: 0%;
+            }
+
+        }
+    }
+
+}
+
+._scroll04 {
+
+    height: auto !important;
+    background-color: antiquewhite !important;
+    padding: 80px 0;
+    text-align: center;
+
+    .stiky_pic {
+        text-align: center;
+
+        img {
+            width: calc((100 - var(--content)) * 1vw);
+            min-width: 700px;
+            transition-duration: 0.9s;
+        }
+    }
+
+}
+
+.weatherContent {
+    background-image: url("/public/img/picture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .blur {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(6px);
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        transition: opacity 250ms;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wrap {
+        margin-top: 130px;
+        height: calc(100% - 130px);
+        padding: 10px 30px 30px 30px;
+    }
+
+    .search {
+        margin-top: 20px;
+        align-items: center;
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px, rgb(0 0 0 / 12%) 0px 1px 4px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        padding: 10px;
+        pointer-events: all;
+        width: calc(100% - 20px);
+
+        svg {
+            color: #fff;
+            font-size: 22px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 0;
+            background-color: rgba(0, 0, 0, 0);
+            outline: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    .weather {
+        margin-top: 20px;
+        display: grid;
+        height: 450px;
+        grid-template-columns: 4fr 6fr;
+        gap: 40px;
+
+        &:nth-child(1) {
+            grid-column: span 2;
+        }
+
+        ._item {
+            align-items: center;
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px, rgb(0 0 0 / 12%) 0px 1px 4px;
+            padding: 10px;
+            pointer-events: all;
+            width: calc(100% - 20px);
+        }
+
+        ._item-bg {
+            position: relative;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px, rgb(0 0 0 / 12%) 0px 1px 4px;
+            padding: 10px;
+            pointer-events: all;
+            overflow: hidden;
+            width: calc(100% - 20px);
+
+            .flex {
+                display: flex;
+                gap: 20px;
+            }
+
+            img {
+                width: 300px;
+                height: 300px;
+                position: absolute;
+                right: -15%;
+                top: -95%;
+                opacity: 0.5;
+            }
+        }
+
+        ._item-title {
+            color: whitesmoke;
+            font-size: 3em;
+            font-family: $font;
+            height: 80px;
+            line-height: 80px;
+            text-shadow: 2px 2px 2px rgb(0 0 0 / 10%);
+        }
+
+        ._item-temp {
+            font-size: 20px;
+            font-family: $font;
+            margin-left: 5px;
+            font-weight: 500px;
+            color: #fff;
+            mix-blend-mode: difference;
+
+            .small {
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+.search_grid {
+    position: relative;
+
+
+    .searchList {
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #666666;
+            background-clip: padding-box;
+            border-radius: 10px;
+        }
+
+        margin-top: 5px;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px,
+        rgb(0 0 0 / 12%) 0px 1px 4px;
+        gap: 10px;
+        max-height: 300px;
+        pointer-events: all;
+        overflow-y: scroll;
+        width: calc(100% - 20px);
+        opacity: 0;
+        position: absolute;
+        z-index: 3;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        transition: all 300ms ease-in-out;
+
+        .item {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 800;
+            font-family: $font;
+            color: #333333;
+
+            & div {
+                transition: 300ms all ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    color: $MainColor;
+                }
+            }
+        }
+    }
+
+    .searched {
+        padding: 10px;
+        opacity: 1;
+    }
+}

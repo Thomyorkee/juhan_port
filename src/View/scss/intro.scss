@@ -1,0 +1,308 @@
+@import url("https: //cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css");
+$MainColor: #1d9be2;
+$font: "SUIT";
+$fontR: "400";
+$fontT: 100;
+$fontL: 300;
+$fontR: 400;
+$fontM: 500;
+$fontB: 700;
+$fontBl: 900;
+
+/*history S*/
+.history {
+  position: relative;
+
+  .historyContent {
+    padding: 80px 0;
+
+    &:nth-child(2) {
+      background-color: #f1f3f7;
+    }
+  }
+
+  ._grid {
+    display: grid;
+    grid-template-columns: 120px auto 1fr;
+    align-items: flex-start;
+
+    ._item {
+      .border {
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        background-color: $MainColor;
+      }
+
+      &:nth-child(2) {
+        margin: 10px 20px;
+      }
+
+      &:nth-child(3) {
+        font-size: 18px;
+        font-family: $font;
+        font-weight: $fontM;
+        line-height: 28px;
+        margin-left: 40px;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 16px;
+          margin-left: 30px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 14px;
+          margin-left: 25px;
+        }
+      }
+
+      .color {
+        color: $MainColor;
+      }
+
+      ._item-title {
+        font-size: 25px;
+        font-family: $font;
+        font-weight: $fontB;
+        color: $MainColor;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 20px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+
+      ._item-circle {
+        transform: translate(calc(-50% + 1px), -50%);
+
+        ._circleWhite {
+          background: #fff !important;
+          width: 8px !important;
+          height: 8px !important;
+          border-radius: 50px;
+          position: relative;
+          z-index: 4;
+        }
+
+        &::after {
+          display: block;
+          content: "";
+          animation: sparkle 1s linear infinite;
+          background-color: rgba(80, 178, 233, 0.5);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          transition-duration: 0.5s;
+        }
+
+        &::before {
+          display: block;
+          content: "";
+          background-color: rgba(80, 178, 233, 1);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 16px !important;
+          height: 16px !important;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          transition-duration: 0.5s;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+/*history E*/
+
+/*client S*/
+.client {
+  .swiperBox {
+    position: relative;
+  }
+
+  .swiperBtn {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, calc(-50% - 80px));
+    background-color: $MainColor;
+    width: 70px;
+    height: 70px;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+      background-color: #f1f3f7;
+      cursor: inherit;
+    }
+
+    @media screen and (max-width: 1198px) {
+      z-index: 9;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .swiperBtn {
+      display: none;
+    }
+  }
+
+  .prevBtn {
+    left: -130px;
+
+    @media screen and (max-width: 1198px) {
+      left: 0;
+    }
+  }
+
+  .nextBtn {
+    right: -130px;
+
+    @media screen and (max-width: 1198px) {
+      right: 0;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    th {
+      border: 1px solid #e1e1e1;
+      border-top: 2px solid $MainColor;
+      background-color: #f1f3f7;
+      font-size: 18px;
+      font-weight: $fontR;
+      font-family: $font;
+      padding: 10px 0;
+
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        font-size: 16px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+
+    td {
+      border: 1px solid #e1e1e1;
+      font-size: 16px;
+      font-weight: $fontR;
+      font-family: $font;
+      padding: 10px 10px;
+
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 12px;
+      }
+
+      &:nth-child(3) {
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+
+.submitWrap {
+  margin-top: 50px;
+
+  & p {
+    font-family: 'SUIT';
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #666666;
+  }
+
+  .submitBtn {
+    cursor: pointer;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 55px;
+    margin-top: 50px;
+    background: #333333;
+    transition: all 300ms;
+
+    & p {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 40px;
+      color: #FFFFFF;
+    }
+
+    &:hover {
+      .arrow>div {
+        .arrow-1 {
+          left: 5px;
+        }
+
+        .vector-8 {
+          left: 14px;
+        }
+      }
+    }
+
+    .arrow {
+      align-items: flex-start;
+      display: flex;
+      min-width: 53px;
+
+      .overlap-group {
+        height: 24px;
+        position: relative;
+        width: 53px;
+
+        .ellipse-9 {
+          background-color: #ffffff;
+          border-radius: 12px;
+          height: 24px;
+          left: 29px;
+          position: absolute;
+          top: 0;
+          width: 24px;
+        }
+
+        .arrow-1 {
+          height: 7px;
+          left: 0;
+          object-fit: cover;
+          position: absolute;
+          top: 8px;
+          width: 44px;
+          transition: all 300ms;
+        }
+
+        .vector-8 {
+          height: 1px;
+          left: 9px;
+          object-fit: cover;
+          position: absolute;
+          top: 11px;
+          width: 20px;
+          transition: all 300ms;
+        }
+      }
+    }
+  }
+}
